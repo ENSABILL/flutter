@@ -23,7 +23,7 @@ class HomePageState extends State<HomePage> {
   int currentIndexPage = 0;
   int? pageLength;
 
-  late List<BankingHomeModel> mList1=[];
+  late List<BankingHomeModel> mList1;
   late List<BankingHomeModel2> mList2;
   late String token='';
 
@@ -323,20 +323,23 @@ class HomePageState extends State<HomePage> {
                         children: [
                           Icon(Icons.account_balance_wallet,
                               size: 30, color: Banking_Primary),
-                          10.width,
-                          Text('${mList1[index].name}',
+                          5.width,
+                          Text(mList1[index].name!,
                               style: primaryTextStyle(
-                                  size: 16,
+                                  size: 10,
                                   color: Banking_TextColorPrimary,
                                   fontFamily: fontMedium))
                               .expand(),
-                          Text("${mList1[index].type!}",
-                              style: primaryTextStyle(size: 16)),
+                          5.width,
+                          Text(mList1[index].type!,
+                              style: primaryTextStyle(size: 10)),
+                          5.width,
                           Text("${mList1[index].amount!}",
                               style: primaryTextStyle(
-                                  color: Colors.green, size: 16)),
+                                  color: Colors.green, size: 10)),
+                          5.width,
                           Text("${mList1[index].operationTime!}",
-                              style: primaryTextStyle( size: 16)),
+                              style: primaryTextStyle( size: 10)),
 
                         ],
                       ),

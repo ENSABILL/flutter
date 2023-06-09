@@ -97,7 +97,7 @@ class DonatonConfirmationFinalPage extends StatelessWidget {
                           final donation = selectedDonations[index];
                           final reference = 'Reference ${index + 1}'; // Replace with your reference data
                           final description = 'Description ${index + 1}'; // Replace with your description data
-                          final price = '100'; // Replace with your price data
+                          final String price =donationAmount ; // Replace with your price data
 
                           return ListTile(
                             title: Text('$reference - $description',style: TextStyle(fontSize: 15),),

@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:banking/constants/app_constants.dart';
 
 import 'package:nb_utils/nb_utils.dart';
-import 'package:banking/constants/app_constants.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({

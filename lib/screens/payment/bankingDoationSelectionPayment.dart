@@ -10,11 +10,15 @@ class DonationSelectionScreen extends StatefulWidget {
   final String associationName;
   final String creance;
   final String donorName;
+  final int amount;
+
+
 
   DonationSelectionScreen({
     required this.associationName,
     required this.creance,
     required this.donorName,
+    required this.amount,
   });
 
   @override

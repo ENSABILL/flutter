@@ -19,6 +19,8 @@ class DonationScreen extends StatefulWidget {
 class _DonationScreenState extends State<DonationScreen> {
   TextEditingController _nameController = TextEditingController();
   TextEditingController _amountController = TextEditingController();
+  late int amount;
+  late String donorname;
 
   List<Donation> _donation = [
     // Facture(description: 'Facture 1', amount: 50),
@@ -45,6 +47,8 @@ class _DonationScreenState extends State<DonationScreen> {
   void initState() {
     super.initState();
     initializeData();
+    amount=0;
+    donorname='';
     // ProductProvider productProvider = Provider.of<ProductProvider>(context);
     // BankingServiceModel? selectedProduct = productProvider.selectedProduct;
   }
@@ -140,6 +144,7 @@ class _DonationScreenState extends State<DonationScreen> {
                     child: TextFormField(
                       decoration: ThemeHelper().textInputDecoration('Donor Name', 'Enter your Donor name'),
                       onChanged: (val) {
+                        donorname= val;
                       },
                       validator: (val){
                         if (val!.isEmpty) {
@@ -156,7 +161,7 @@ class _DonationScreenState extends State<DonationScreen> {
                     child: TextFormField(
                       decoration: ThemeHelper().textInputDecoration('Amount', 'Enter your amount'),
                       onChanged: (val) {
-
+                           amount = val as int;
                       },
                       keyboardType: TextInputType.number,
                       validator: (val){
@@ -187,7 +192,7 @@ class _DonationScreenState extends State<DonationScreen> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => DonationSelectionScreen(associationName: "ALCS", creance: "SIdation", donorName:"Mustapha" ),
+                                    builder: (context) => DonationSelectionScreen(associationName: "ALCS", creance: "SIdation", donorName: donorname, amount: amount,),
                                   ),
                                 );
                               });

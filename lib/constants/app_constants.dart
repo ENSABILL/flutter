@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-const hostLink = "https://ebankingappbackend.azurewebsites.net/api/v1";
+const hostLink = "https://myebankingapp.azurewebsites.net/api/v1";
 
 const kDefaultPadding = 20.0;
 const kPrimaryColour = Color(0xFF8C3F8F);
